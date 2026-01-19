@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экзаменационные вопросы - Интеграция ИТ систем</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 10px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .search-box {
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .question-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .question-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .answer {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+        .answer ul, .answer ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .answer li {
+            margin-bottom: 8px;
+        }
+
+        .answer strong {
+            color: #667eea;
+        }
+
+        .highlight {
+            background: yellow;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .question {
+                padding: 15px;
+            }
+
+            .question-title {
+                font-size: 16px;
+            }
+
+            .answer {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Экзаменационные вопросы</h1>
+            <p>Интеграция ИТ систем</p>
+            <div class="search-box">
+                <input type="text" class="search-input" id="questionSearch" placeholder="Введите номер вопроса (1-27)">
+            </div>
+        </div>
+        <div class="content">
+            <div class="question" id="q1">
+                <span class="question-number">1</span>
+                <div class="question-title">Общее представление о понятии интеграции ИТ систем. Определения понятия.</div>
+                <div class="answer">
+                    <p><strong>Интеграция ИТ систем</strong> — это процесс объединения различных информационных систем, приложений и сервисов в единую согласованную среду для обеспечения эффективного обмена данными и совместной работы.</p>
+                    <p>Основные определения:</p>
+                    <ul>
+                        <li><strong>Интеграция</strong> — процесс соединения отдельных компонентов в единое целое, обеспечивающее их совместное функционирование</li>
+                        <li><strong>Интеграция ИТ систем</strong> — комплекс мероприятий по объединению различных информационных систем для обеспечения их взаимодействия и обмена данными</li>
+                        <li><strong>Межсистемная интеграция</strong> — интеграция между различными независимыми системами, часто принадлежащими разным организациям или подразделениям</li>
+                        <li><strong>Внутрисистемная интеграция</strong> — интеграция компонентов внутри одной системы</li>
+                    </ul>
+                    <p>Цели интеграции: повышение эффективности бизнес-процессов, устранение дублирования данных, обеспечение единообразия информации, автоматизация обмена данными между системами.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q2">
+                <span class="question-number">2</span>
+                <div class="question-title">Виды интеграционных решений</div>
+                <div class="answer">
+                    <p>Интеграционные решения классифицируются по различным признакам:</p>
+                    <p><strong>1. По типу взаимодействия:</strong></p>
+                    <ul>
+                        <li><strong>Синхронная интеграция</strong> — взаимодействие в реальном времени с ожиданием ответа</li>
+                        <li><strong>Асинхронная интеграция</strong> — взаимодействие через очереди сообщений без ожидания немедленного ответа</li>
+                        <li><strong>Пакетная интеграция</strong> — обмен данными порциями в определенное время</li>
+                    </ul>
+                    <p><strong>2. По архитектурному подходу:</strong></p>
+                    <ul>
+                        <li><strong>Точка-точка (Point-to-Point)</strong> — прямое соединение систем</li>
+                        <li><strong>Шина интеграции (ESB)</strong> — централизованная шина для маршрутизации сообщений</li>
+                        <li><strong>Брокер сообщений</strong> — промежуточное ПО для асинхронного обмена</li>
+                        <li><strong>API Gateway</strong> — единая точка входа для API</li>
+                    </ul>
+                    <p><strong>3. По типу данных:</strong></p>
+                    <ul>
+                        <li>Интеграция на уровне данных (общие БД, репликация)</li>
+                        <li>Интеграция на уровне приложений (API, веб-сервисы)</li>
+                        <li>Интеграция на уровне представления (порталы, единый интерфейс)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q3">
+                <span class="question-number">3</span>
+                <div class="question-title">Основные шаблоны интеграции ИТ систем: файловый обмен, RPC, общая база данных, интеграционные платформы</div>
+                <div class="answer">
+                    <p><strong>1. Файловый обмен:</strong></p>
+                    <ul>
+                        <li>Системы обмениваются данными через файлы (CSV, XML, JSON, EDI)</li>
+                        <li>Простота реализации, подходит для пакетной обработки</li>
+                        <li>Недостатки: задержки, проблемы с синхронизацией, сложность обработки ошибок</li>
+                    </ul>
+                    <p><strong>2. RPC (Remote Procedure Call):</strong></p>
+                    <ul>
+                        <li>Вызов удаленных процедур/функций как локальных</li>
+                        <li>Синхронное взаимодействие в реальном времени</li>
+                        <li>Примеры: CORBA, DCOM, gRPC</li>
+                        <li>Недостатки: тесная связанность, проблемы с масштабированием</li>
+                    </ul>
+                    <p><strong>3. Общая база данных (Shared Database):</strong></p>
+                    <ul>
+                        <li>Несколько систем используют одну БД</li>
+                        <li>Простота доступа к данным</li>
+                        <li>Недостатки: нарушение инкапсуляции, проблемы с масштабированием, зависимость от схемы БД</li>
+                    </ul>
+                    <p><strong>4. Интеграционные платформы:</strong></p>
+                    <ul>
+                        <li>Централизованные решения для интеграции (ESB, iPaaS)</li>
+                        <li>Предоставляют инструменты для маршрутизации, трансформации, оркестрации</li>
+                        <li>Примеры: MuleSoft, Apache Camel, IBM Integration Bus</li>
+                        <li>Преимущества: централизованное управление, переиспользование компонентов</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q4">
+                <span class="question-number">4</span>
+                <div class="question-title">Виды требований</div>
+                <div class="answer">
+                    <p><strong>1. Функциональные требования:</strong></p>
+                    <ul>
+                        <li>Описывают что должна делать система</li>
+                        <li>Определяют поведение системы в различных ситуациях</li>
+                        <li>Примеры: "Система должна отправлять уведомления при изменении статуса заказа"</li>
+                    </ul>
+                    <p><strong>2. Нефункциональные требования:</strong></p>
+                    <ul>
+                        <li>Описывают как система должна работать</li>
+                        <li>Категории: производительность, безопасность, надежность, масштабируемость, удобство использования</li>
+                        <li>Примеры: "Время ответа API не должно превышать 200мс", "Система должна обрабатывать 1000 запросов в секунду"</li>
+                    </ul>
+                    <p><strong>3. Бизнес-требования:</strong></p>
+                    <ul>
+                        <li>Высокоуровневые цели бизнеса</li>
+                        <li>Определяют зачем нужна интеграция</li>
+                    </ul>
+                    <p><strong>4. Технические требования:</strong></p>
+                    <ul>
+                        <li>Ограничения и стандарты (протоколы, форматы данных, платформы)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q5">
+                <span class="question-number">5</span>
+                <div class="question-title">Анализ требований и выделение User Stories, связанных с интеграциями</div>
+                <div class="answer">
+                    <p><strong>User Story</strong> — краткое описание функциональности с точки зрения пользователя в формате:</p>
+                    <p><em>"Как [роль], я хочу [действие], чтобы [результат]"</em></p>
+                    <p><strong>Примеры User Stories для интеграций:</strong></p>
+                    <ul>
+                        <li>"Как менеджер по продажам, я хочу видеть актуальные данные о наличии товара из системы складского учета, чтобы корректно оформлять заказы"</li>
+                        <li>"Как бухгалтер, я хочу автоматически получать данные о продажах из CRM, чтобы формировать финансовую отчетность"</li>
+                        <li>"Как клиент, я хочу получать уведомления о статусе заказа в реальном времени, чтобы знать когда придет доставка"</li>
+                    </ul>
+                    <p><strong>Критерии приемки (Acceptance Criteria):</strong></p>
+                    <ul>
+                        <li>Данные синхронизируются между системами в течение 5 секунд</li>
+                        <li>При ошибке интеграции отправляется уведомление администратору</li>
+                        <li>Система обрабатывает до 1000 транзакций в минуту</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q6">
+                <span class="question-number">6</span>
+                <div class="question-title">Анализ требований и Разработка текстовых сценариев интеграции (Use Cases)</div>
+                <div class="answer">
+                    <p><strong>Use Case</strong> — детальное описание взаимодействия актора с системой для достижения цели.</p>
+                    <p><strong>Структура Use Case:</strong></p>
+                    <ul>
+                        <li><strong>Название:</strong> Краткое описание сценария</li>
+                        <li><strong>Акторы:</strong> Участники взаимодействия</li>
+                        <li><strong>Предусловия:</strong> Условия, которые должны быть выполнены до начала</li>
+                        <li><strong>Основной поток:</strong> Последовательность шагов успешного выполнения</li>
+                        <li><strong>Альтернативные потоки:</strong> Варианты выполнения при ошибках</li>
+                        <li><strong>Постусловия:</strong> Состояние системы после выполнения</li>
+                    </ul>
+                    <p><strong>Пример Use Case "Синхронизация заказа":</strong></p>
+                    <p><strong>Акторы:</strong> CRM система, ERP система</p>
+                    <p><strong>Основной поток:</strong></p>
+                    <ol>
+                        <li>CRM создает новый заказ</li>
+                        <li>CRM отправляет данные заказа в ERP через API</li>
+                        <li>ERP валидирует данные</li>
+                        <li>ERP создает заказ и возвращает ID</li>
+                        <li>CRM получает подтверждение и сохраняет ID ERP</li>
+                    </ol>
+                    <p><strong>Альтернативный поток 3а:</strong> Если данные невалидны, ERP возвращает ошибку, CRM уведомляет пользователя</p>
+                </div>
+            </div>
+
+            <div class="question" id="q7">
+                <span class="question-number">7</span>
+                <div class="question-title">Разработка функциональных требований к интеграции</div>
+                <div class="answer">
+                    <p>Функциональные требования описывают конкретное поведение интеграции:</p>
+                    <p><strong>1. Обмен данными:</strong></p>
+                    <ul>
+                        <li>Система A должна отправлять данные о заказах в систему B в формате JSON</li>
+                        <li>Синхронизация должна происходить при создании, изменении и удалении заказа</li>
+                    </ul>
+                    <p><strong>2. Трансформация данных:</strong></p>
+                    <ul>
+                        <li>Система должна преобразовывать формат даты из "DD.MM.YYYY" в "YYYY-MM-DD"</li>
+                        <li>Маппинг полей: "customer_name" → "clientName"</li>
+                    </ul>
+                    <p><strong>3. Валидация:</strong></p>
+                    <ul>
+                        <li>Система должна проверять обязательные поля перед отправкой</li>
+                        <li>При невалидных данных должна возвращаться ошибка с описанием</li>
+                    </ul>
+                    <p><strong>4. Обработка ошибок:</strong></p>
+                    <ul>
+                        <li>При недоступности целевой системы сообщения должны помещаться в очередь повторов</li>
+                        <li>После 3 неудачных попыток отправлять уведомление администратору</li>
+                    </ul>
+                    <p><strong>5. Логирование:</strong></p>
+                    <ul>
+                        <li>Все операции интеграции должны логироваться с уровнем INFO</li>
+                        <li>Ошибки должны логироваться с уровнем ERROR</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q8">
+                <span class="question-number">8</span>
+                <div class="question-title">Разработка нефункциональных требований к интеграции</div>
+                <div class="answer">
+                    <p><strong>1. Производительность:</strong></p>
+                    <ul>
+                        <li>Время ответа API не должно превышать 200мс для 95% запросов</li>
+                        <li>Пропускная способность: минимум 1000 транзакций в секунду</li>
+                        <li>Время обработки пакетного обмена: не более 5 минут для 10000 записей</li>
+                    </ul>
+                    <p><strong>2. Надежность:</strong></p>
+                    <ul>
+                        <li>Доступность системы: 99.9% (не более 8.76 часов простоя в год)</li>
+                        <li>Обработка ошибок: автоматический повтор при временных сбоях</li>
+                        <li>Транзакционность: обеспечение ACID для критических операций</li>
+                    </ul>
+                    <p><strong>3. Масштабируемость:</strong></p>
+                    <ul>
+                        <li>Горизонтальное масштабирование: возможность добавления узлов без изменения кода</li>
+                        <li>Поддержка увеличения нагрузки в 10 раз без архитектурных изменений</li>
+                    </ul>
+                    <p><strong>4. Безопасность:</strong></p>
+                    <ul>
+                        <li>Аутентификация через OAuth 2.0</li>
+                        <li>Шифрование данных при передаче (TLS 1.3)</li>
+                        <li>Авторизация на уровне API endpoints</li>
+                        <li>Логирование всех операций для аудита</li>
+                    </ul>
+                    <p><strong>5. Совместимость:</strong></p>
+                    <ul>
+                        <li>Поддержка версионирования API</li>
+                        <li>Обратная совместимость в течение 2 версий</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q9">
+                <span class="question-number">9</span>
+                <div class="question-title">Модели архитектуры информационных систем</div>
+                <div class="answer">
+                    <p><strong>1. Многоуровневая архитектура (N-Tier):</strong></p>
+                    <ul>
+                        <li>Разделение на слои: представление, бизнес-логика, данные</li>
+                        <li>Примеры: 3-tier, 4-tier архитектуры</li>
+                    </ul>
+                    <p><strong>2. Микросервисная архитектура:</strong></p>
+                    <ul>
+                        <li>Система состоит из независимых сервисов</li>
+                        <li>Каждый сервис отвечает за отдельную бизнес-функцию</li>
+                        <li>Коммуникация через API</li>
+                    </ul>
+                    <p><strong>3. Монолитная архитектура:</strong></p>
+                    <ul>
+                        <li>Единое приложение со всеми компонентами</li>
+                        <li>Простота разработки, но сложность масштабирования</li>
+                    </ul>
+                    <p><strong>4. Сервис-ориентированная архитектура (SOA):</strong></p>
+                    <ul>
+                        <li>Система состоит из переиспользуемых сервисов</li>
+                        <li>Коммуникация через стандартизированные интерфейсы (SOAP, REST)</li>
+                        <li>Использование ESB для оркестрации</li>
+                    </ul>
+                    <p><strong>5. Событийно-ориентированная архитектура (EDA):</strong></p>
+                    <ul>
+                        <li>Компоненты взаимодействуют через события</li>
+                        <li>Слабая связанность, высокая масштабируемость</li>
+                    </ul>
+                    <p><strong>6. Архитектура на основе сообщений (Message-Driven):</strong></p>
+                    <ul>
+                        <li>Асинхронная коммуникация через очереди сообщений</li>
+                        <li>Примеры: RabbitMQ, Apache Kafka</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q10">
+                <span class="question-number">10</span>
+                <div class="question-title">Классификация архитектурных решений</div>
+                <div class="answer">
+                    <p><strong>1. По типу интеграции:</strong></p>
+                    <ul>
+                        <li><strong>Точка-точка:</strong> прямое соединение систем</li>
+                        <li><strong>Звезда (Hub-and-Spoke):</strong> центральный узел с радиальными соединениями</li>
+                        <li><strong>Шина (Bus):</strong> общая шина для всех систем</li>
+                        <li><strong>Сеть (Mesh):</strong> множественные соединения между системами</li>
+                    </ul>
+                    <p><strong>2. По способу коммуникации:</strong></p>
+                    <ul>
+                        <li>Синхронная (RPC, REST)</li>
+                        <li>Асинхронная (очереди, события)</li>
+                        <li>Гибридная</li>
+                    </ul>
+                    <p><strong>3. По уровню централизации:</strong></p>
+                    <ul>
+                        <li><strong>Централизованная:</strong> единая точка управления (ESB)</li>
+                        <li><strong>Децентрализованная:</strong> распределенное управление (API Gateway, Service Mesh)</li>
+                    </ul>
+                    <p><strong>4. По типу данных:</strong></p>
+                    <ul>
+                        <li>Интеграция на уровне БД</li>
+                        <li>Интеграция на уровне приложений</li>
+                        <li>Интеграция на уровне представления</li>
+                    </ul>
+                    <p><strong>5. По паттернам:</strong></p>
+                    <ul>
+                        <li>Publisher-Subscriber</li>
+                        <li>Request-Reply</li>
+                        <li>Point-to-Point</li>
+                        <li>Message Router</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q11">
+                <span class="question-number">11</span>
+                <div class="question-title">Верхнеуровневое проектирование архитектуры. Нотация С4</div>
+                <div class="answer">
+                    <p><strong>Нотация С4</strong> — методология для визуализации архитектуры программного обеспечения на разных уровнях абстракции.</p>
+                    <p><strong>Уровни С4:</strong></p>
+                    <p><strong>1. Context (Контекст) — C1:</strong></p>
+                    <ul>
+                        <li>Высокоуровневая диаграмма системы в контексте</li>
+                        <li>Показывает систему как черный ящик и ее взаимодействие с пользователями и внешними системами</li>
+                        <li>Аудитория: все заинтересованные стороны</li>
+                    </ul>
+                    <p><strong>2. Container (Контейнер) — C2:</strong></p>
+                    <ul>
+                        <li>Декомпозиция системы на контейнеры (приложения, БД, файловые системы)</li>
+                        <li>Показывает высокоуровневую техническую архитектуру</li>
+                        <li>Аудитория: разработчики, DevOps</li>
+                    </ul>
+                    <p><strong>3. Component (Компонент) — C3:</strong></p>
+                    <ul>
+                        <li>Декомпозиция контейнера на компоненты</li>
+                        <li>Показывает структуру приложения</li>
+                        <li>Аудитория: разработчики</li>
+                    </ul>
+                    <p><strong>4. Code (Код) — C4:</strong></p>
+                    <ul>
+                        <li>Декомпозиция компонента на классы/модули</li>
+                        <li>UML-диаграммы классов</li>
+                        <li>Аудитория: разработчики</li>
+                    </ul>
+                    <p><strong>Преимущества С4:</strong> простота, масштабируемость, понятность для разных аудиторий, стандартизация представления архитектуры.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q12">
+                <span class="question-number">12</span>
+                <div class="question-title">Данные/Анализ моделей и потоков данных</div>
+                <div class="answer">
+                    <p><strong>Анализ моделей данных</strong> включает:</p>
+                    <p><strong>1. Концептуальная модель данных:</strong></p>
+                    <ul>
+                        <li>Высокоуровневое представление сущностей и их связей</li>
+                        <li>Независима от конкретной СУБД</li>
+                        <li>ER-диаграммы (Entity-Relationship)</li>
+                    </ul>
+                    <p><strong>2. Логическая модель данных:</strong></p>
+                    <ul>
+                        <li>Детализация концептуальной модели</li>
+                        <li>Определение атрибутов, типов данных, ключей</li>
+                        <li>Нормализация данных</li>
+                    </ul>
+                    <p><strong>3. Физическая модель данных:</strong></p>
+                    <ul>
+                        <li>Реализация в конкретной СУБД</li>
+                        <li>Индексы, партиционирование, оптимизация</li>
+                    </ul>
+                    <p><strong>Анализ потоков данных:</strong></p>
+                    <ul>
+                        <li>Определение источников данных (Data Sources)</li>
+                        <li>Определение приемников данных (Data Sinks)</li>
+                        <li>Маршруты передачи данных</li>
+                        <li>Трансформации данных в процессе передачи</li>
+                        <li>Частота и объемы передачи</li>
+                        <li>Зависимости между потоками</li>
+                    </ul>
+                    <p><strong>Инструменты:</strong> DFD (Data Flow Diagrams), ER-диаграммы, матрицы потоков данных.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q13">
+                <span class="question-number">13</span>
+                <div class="question-title">Анализ концептуальной модели данных</div>
+                <div class="answer">
+                    <p><strong>Концептуальная модель данных</strong> — абстрактное представление структуры данных без привязки к конкретной реализации.</p>
+                    <p><strong>Элементы концептуальной модели:</strong></p>
+                    <ul>
+                        <li><strong>Сущности (Entities):</strong> объекты предметной области (Заказ, Клиент, Товар)</li>
+                        <li><strong>Атрибуты (Attributes):</strong> свойства сущностей (имя клиента, дата заказа)</li>
+                        <li><strong>Связи (Relationships):</strong> отношения между сущностями (один-ко-многим, многие-ко-многим)</li>
+                        <li><strong>Ключи:</strong> уникальные идентификаторы сущностей</li>
+                    </ul>
+                    <p><strong>Процесс анализа:</strong></p>
+                    <ol>
+                        <li><strong>Выявление сущностей:</strong> определение основных объектов предметной области</li>
+                        <li><strong>Определение атрибутов:</strong> свойства каждой сущности</li>
+                        <li><strong>Установление связей:</strong> отношения между сущностями</li>
+                        <li><strong>Определение кардинальности:</strong> 1:1, 1:N, M:N</li>
+                        <li><strong>Нормализация:</strong> устранение избыточности и аномалий</li>
+                    </ol>
+                    <p><strong>Пример:</strong> Сущности "Заказ" и "Клиент" связаны отношением "оформляет" с кардинальностью "один клиент может оформить много заказов" (1:N).</p>
+                </div>
+            </div>
+
+            <div class="question" id="q14">
+                <span class="question-number">14</span>
+                <div class="question-title">Разработка диаграмм потоков данных (Data Flow Diagram)</div>
+                <div class="answer">
+                    <p><strong>DFD (Data Flow Diagram)</strong> — графическое представление потоков данных в системе.</p>
+                    <p><strong>Элементы DFD:</strong></p>
+                    <ul>
+                        <li><strong>Процесс (Process):</strong> преобразование данных (круг или прямоугольник с закругленными углами)</li>
+                        <li><strong>Хранилище данных (Data Store):</strong> место хранения данных (открытый прямоугольник)</li>
+                        <li><strong>Внешняя сущность (External Entity):</strong> источник или приемник данных вне системы (квадрат)</li>
+                        <li><strong>Поток данных (Data Flow):</strong> направление передачи данных (стрелка с подписью)</li>
+                    </ul>
+                    <p><strong>Уровни DFD:</strong></p>
+                    <ul>
+                        <li><strong>Контекстная диаграмма (Level 0):</strong> система как один процесс с внешними сущностями</li>
+                        <li><strong>Диаграмма уровня 1:</strong> декомпозиция основного процесса</li>
+                        <li><strong>Диаграммы уровня 2+:</strong> дальнейшая детализация</li>
+                    </ul>
+                    <p><strong>Правила построения:</strong></p>
+                    <ul>
+                        <li>Каждый процесс должен иметь входы и выходы</li>
+                        <li>Потоки данных не могут идти напрямую между хранилищами</li>
+                        <li>Потоки данных не могут идти напрямую между внешними сущностями</li>
+                        <li>Все процессы должны быть соединены с остальной диаграммой</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q15">
+                <span class="question-number">15</span>
+                <div class="question-title">Описание преобразований данных (Data Mapping)</div>
+                <div class="answer">
+                    <p><strong>Data Mapping</strong> — процесс определения соответствия между полями данных в разных системах.</p>
+                    <p><strong>Типы преобразований:</strong></p>
+                    <p><strong>1. Прямое маппирование:</strong></p>
+                    <ul>
+                        <li>Поле источника напрямую копируется в поле назначения</li>
+                        <li>Пример: "customer_name" → "clientName"</li>
+                    </ul>
+                    <p><strong>2. Трансформация формата:</strong></p>
+                    <ul>
+                        <li>Изменение формата данных (дата, число, строка)</li>
+                        <li>Пример: "01.12.2023" → "2023-12-01"</li>
+                    </ul>
+                    <p><strong>3. Вычисляемые поля:</strong></p>
+                    <ul>
+                        <li>Значение вычисляется на основе нескольких полей</li>
+                        <li>Пример: "total_price" = "quantity" × "unit_price"</li>
+                    </ul>
+                    <p><strong>4. Условные преобразования:</strong></p>
+                    <ul>
+                        <li>Разные правила в зависимости от условий</li>
+                        <li>Пример: если "status" = "active", то "isEnabled" = true</li>
+                    </ul>
+                    <p><strong>5. Агрегация:</strong></p>
+                    <ul>
+                        <li>Объединение нескольких записей в одну</li>
+                        <li>Пример: сумма всех позиций заказа</li>
+                    </ul>
+                    <p><strong>6. Валидация и обогащение:</strong></p>
+                    <ul>
+                        <li>Проверка данных и добавление недостающей информации</li>
+                        <li>Пример: проверка корректности email, добавление кода страны к телефону</li>
+                    </ul>
+                    <p><strong>Формат описания маппинга:</strong> таблицы соответствия полей, XML/XSLT трансформации, JSON Schema маппинги.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q16">
+                <span class="question-number">16</span>
+                <div class="question-title">Интеграция/Проектирование межсистемного взаимодействия</div>
+                <div class="answer">
+                    <p><strong>Проектирование межсистемного взаимодействия</strong> включает:</p>
+                    <p><strong>1. Определение интерфейсов:</strong></p>
+                    <ul>
+                        <li>Синтаксис (формат данных: JSON, XML, протокол: REST, SOAP)</li>
+                        <li>Семантика (значение полей, бизнес-правила)</li>
+                        <li>Контракты (API спецификации, схемы данных)</li>
+                    </ul>
+                    <p><strong>2. Выбор паттернов взаимодействия:</strong></p>
+                    <ul>
+                        <li><strong>Request-Reply:</strong> синхронный запрос-ответ</li>
+                        <li><strong>Fire-and-Forget:</strong> асинхронная отправка без ожидания ответа</li>
+                        <li><strong>Publish-Subscribe:</strong> подписка на события</li>
+                        <li><strong>Message Queue:</strong> очередь сообщений</li>
+                    </ul>
+                    <p><strong>3. Проектирование протоколов:</strong></p>
+                    <ul>
+                        <li>Выбор протокола (HTTP/REST, SOAP, gRPC, AMQP)</li>
+                        <li>Определение формата данных</li>
+                        <li>Версионирование API</li>
+                    </ul>
+                    <p><strong>4. Обработка ошибок:</strong></p>
+                    <ul>
+                        <li>Коды ошибок и их значения</li>
+                        <li>Стратегии повторных попыток</li>
+                        <li>Компенсирующие транзакции</li>
+                    </ul>
+                    <p><strong>5. Безопасность:</strong></p>
+                    <ul>
+                        <li>Аутентификация и авторизация</li>
+                        <li>Шифрование данных</li>
+                        <li>Защита от атак</li>
+                    </ul>
+                    <p><strong>6. Мониторинг и логирование:</strong></p>
+                    <ul>
+                        <li>Трассировка запросов</li>
+                        <li>Метрики производительности</li>
+                        <li>Алертинг при ошибках</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q17">
+                <span class="question-number">17</span>
+                <div class="question-title">Разработка диаграммы последовательности (UML Sequence Diagram)</div>
+                <div class="answer">
+                    <p><strong>Sequence Diagram</strong> — диаграмма последовательности, показывающая взаимодействие объектов во времени.</p>
+                    <p><strong>Элементы диаграммы:</strong></p>
+                    <ul>
+                        <li><strong>Актор (Actor):</strong> внешний участник (пользователь, система)</li>
+                        <li><strong>Объект (Object/Lifeline):</strong> участник взаимодействия (вертикальная линия)</li>
+                        <li><strong>Активация (Activation Box):</strong> прямоугольник на линии жизни, показывает период активности</li>
+                        <li><strong>Сообщение (Message):</strong> стрелка между объектами</li>
+                        <li><strong>Ответ (Return):</strong> пунктирная стрелка обратно</li>
+                    </ul>
+                    <p><strong>Типы сообщений:</strong></p>
+                    <ul>
+                        <li><strong>Синхронное:</strong> сплошная стрелка с заполненной головкой →</li>
+                        <li><strong>Асинхронное:</strong> сплошная стрелка с открытой головкой →</li>
+                        <li><strong>Ответ:</strong> пунктирная стрелка ←</li>
+                        <li><strong>Самообращение:</strong> стрелка обращается к самому объекту</li>
+                    </ul>
+                    <p><strong>Пример для интеграции:</strong></p>
+                    <p>Клиент → API Gateway: POST /orders<br>
+                    API Gateway → Order Service: createOrder()<br>
+                    Order Service → Payment Service: processPayment()<br>
+                    Payment Service → Order Service: paymentResult<br>
+                    Order Service → Notification Service: sendNotification() (асинхронно)<br>
+                    Order Service → API Gateway: orderCreated<br>
+                    API Gateway → Клиент: 201 Created</p>
+                    <p><strong>Фрагменты:</strong> alt (альтернатива), loop (цикл), opt (опционально), par (параллельно).</p>
+                </div>
+            </div>
+
+            <div class="question" id="q18">
+                <span class="question-number">18</span>
+                <div class="question-title">Описание запросов и ответов SOAP</div>
+                <div class="answer">
+                    <p><strong>SOAP (Simple Object Access Protocol)</strong> — протокол для обмена структурированными сообщениями в веб-сервисах.</p>
+                    <p><strong>Структура SOAP сообщения:</strong></p>
+                    <ul>
+                        <li><strong>Envelope:</strong> корневой элемент, определяет пространство имен</li>
+                        <li><strong>Header:</strong> опциональные метаданные (аутентификация, маршрутизация)</li>
+                        <li><strong>Body:</strong> основное содержимое запроса/ответа</li>
+                        <li><strong>Fault:</strong> информация об ошибках (в Body)</li>
+                    </ul>
+                    <p><strong>Пример SOAP запроса:</strong></p>
+                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Header&gt;
+    &lt;AuthHeader&gt;
+      &lt;Token&gt;abc123&lt;/Token&gt;
+    &lt;/AuthHeader&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;CreateOrder xmlns="http://example.com/orders"&gt;
+      &lt;order&gt;
+        &lt;customerId&gt;12345&lt;/customerId&gt;
+        &lt;items&gt;
+          &lt;item&gt;
+            &lt;productId&gt;67890&lt;/productId&gt;
+            &lt;quantity&gt;2&lt;/quantity&gt;
+          &lt;/item&gt;
+        &lt;/items&gt;
+      &lt;/order&gt;
+    &lt;/CreateOrder&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+                    <p><strong>Пример SOAP ответа:</strong></p>
+                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;CreateOrderResponse xmlns="http://example.com/orders"&gt;
+      &lt;orderId&gt;98765&lt;/orderId&gt;
+      &lt;status&gt;created&lt;/status&gt;
+    &lt;/CreateOrderResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+                    <p><strong>SOAP Fault:</strong> стандартизированный формат ошибок с кодом, описанием и деталями.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q19">
+                <span class="question-number">19</span>
+                <div class="question-title">Форматы XML и XSD, описание WSDL</div>
+                <div class="answer">
+                    <p><strong>XML (eXtensible Markup Language):</strong></p>
+                    <ul>
+                        <li>Язык разметки для структурированных данных</li>
+                        <li>Самодокументируемый формат</li>
+                        <li>Поддержка пространств имен (namespaces)</li>
+                        <li>Валидация через схемы (XSD, DTD)</li>
+                    </ul>
+                    <p><strong>XSD (XML Schema Definition):</strong></p>
+                    <ul>
+                        <li>Схема для описания структуры XML документов</li>
+                        <li>Определяет элементы, атрибуты, типы данных, ограничения</li>
+                        <li>Поддержка сложных типов, наследования, валидации</li>
+                    </ul>
+                    <p><strong>Пример XSD:</strong></p>
+                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;">
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="order"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="customerId" type="xs:int"/&gt;
+        &lt;xs:element name="items"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="item" maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                  &lt;xs:sequence&gt;
+                    &lt;xs:element name="productId" type="xs:int"/&gt;
+                    &lt;xs:element name="quantity" type="xs:int"/&gt;
+                  &lt;/xs:sequence&gt;
+                &lt;/xs:complexType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</pre>
+                    <p><strong>WSDL (Web Services Description Language):</strong></p>
+                    <ul>
+                        <li>XML-язык для описания веб-сервисов</li>
+                        <li>Определяет операции, сообщения, типы данных, endpoints</li>
+                        <li>Структура: Types, Messages, PortType (интерфейс), Binding (протокол), Service (endpoints)</li>
+                    </ul>
+                    <p><strong>Основные элементы WSDL:</strong></p>
+                    <ul>
+                        <li><strong>types:</strong> определения типов данных (XSD)</li>
+                        <li><strong>message:</strong> структура сообщений</li>
+                        <li><strong>portType:</strong> набор операций</li>
+                        <li><strong>binding:</strong> протокол и формат (SOAP, HTTP)</li>
+                        <li><strong>service:</strong> адреса endpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q20">
+                <span class="question-number">20</span>
+                <div class="question-title">Описание форматов данных JSON</div>
+                <div class="answer">
+                    <p><strong>JSON (JavaScript Object Notation)</strong> — легковесный формат обмена данными.</p>
+                    <p><strong>Типы данных JSON:</strong></p>
+                    <ul>
+                        <li><strong>Object:</strong> набор пар ключ-значение в фигурных скобках {}</li>
+                        <li><strong>Array:</strong> упорядоченный список значений в квадратных скобках []</li>
+                        <li><strong>String:</strong> текст в двойных кавычках</li>
+                        <li><strong>Number:</strong> числа (целые и с плавающей точкой)</li>
+                        <li><strong>Boolean:</strong> true или false</li>
+                        <li><strong>Null:</strong> null</li>
+                    </ul>
+                    <p><strong>Пример JSON объекта:</strong></p>
+                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;">
+{
+  "orderId": 12345,
+  "customerId": 67890,
+  "status": "pending",
+  "items": [
+    {
+      "productId": 111,
+      "name": "Product A",
+      "quantity": 2,
+      "price": 99.99
+    },
+    {
+      "productId": 222,
+      "name": "Product B",
+      "quantity": 1,
+      "price": 149.99
+    }
+  ],
+  "total": 349.97,
+  "createdAt": "2023-12-01T10:30:00Z"
+}</pre>
+                    <p><strong>JSON Schema:</strong> схема для валидации JSON (аналог XSD для XML).</p>
+                    <p><strong>Преимущества JSON:</strong> читаемость, компактность, нативная поддержка в JavaScript, быстрый парсинг.</p>
+                    <p><strong>Ограничения:</strong> нет комментариев, только UTF-8, нет типов даты (используются строки ISO 8601).</p>
+                </div>
+            </div>
+
+            <div class="question" id="q21">
+                <span class="question-number">21</span>
+                <div class="question-title">Проектирование интеграции через шину, брокер</div>
+                <div class="answer">
+                    <p><strong>Интеграция через шину (ESB - Enterprise Service Bus):</strong></p>
+                    <p><strong>Архитектура:</strong></p>
+                    <ul>
+                        <li>Централизованная шина для маршрутизации сообщений</li>
+                        <li>Системы подключаются к шине, а не друг к другу напрямую</li>
+                        <li>Шина обеспечивает трансформацию, маршрутизацию, оркестрацию</li>
+                    </ul>
+                    <p><strong>Преимущества:</strong></p>
+                    <ul>
+                        <li>Централизованное управление</li>
+                        <li>Слабая связанность систем</li>
+                        <li>Переиспользование компонентов</li>
+                        <li>Единая точка мониторинга</li>
+                    </ul>
+                    <p><strong>Недостатки:</strong></p>
+                    <ul>
+                        <li>Единая точка отказа</li>
+                        <li>Сложность масштабирования</li>
+                        <li>Потенциальное узкое место производительности</li>
+                    </ul>
+                    <p><strong>Интеграция через брокер сообщений:</strong></p>
+                    <p><strong>Архитектура:</strong></p>
+                    <ul>
+                        <li>Асинхронная коммуникация через очереди/топики</li>
+                        <li>Publisher отправляет сообщения в топик/очередь</li>
+                        <li>Subscriber получает сообщения из топика/очереди</li>
+                    </ul>
+                    <p><strong>Паттерны:</strong></p>
+                    <ul>
+                        <li><strong>Point-to-Point:</strong> одна очередь, один получатель</li>
+                        <li><strong>Publish-Subscribe:</strong> топик, множество подписчиков</li>
+                        <li><strong>Request-Reply:</strong> очередь запросов + очередь ответов</li>
+                    </ul>
+                    <p><strong>Преимущества:</strong></p>
+                    <ul>
+                        <li>Асинхронность, высокая производительность</li>
+                        <li>Масштабируемость</li>
+                        <li>Надежность (персистентность сообщений)</li>
+                        <li>Слабая связанность</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q22">
+                <span class="question-number">22</span>
+                <div class="question-title">Интеграционные шины (ESB)</div>
+                <div class="answer">
+                    <p><strong>ESB (Enterprise Service Bus)</strong> — централизованная платформа для интеграции приложений.</p>
+                    <p><strong>Основные функции ESB:</strong></p>
+                    <ul>
+                        <li><strong>Маршрутизация:</strong> направление сообщений к нужным получателям</li>
+                        <li><strong>Трансформация:</strong> преобразование форматов данных</li>
+                        <li><strong>Оркестрация:</strong> координация множественных сервисов</li>
+                        <li><strong>Адаптеры:</strong> подключение различных протоколов и форматов</li>
+                        <li><strong>Мониторинг:</strong> отслеживание сообщений и производительности</li>
+                        <li><strong>Безопасность:</strong> аутентификация, авторизация, шифрование</li>
+                    </ul>
+                    <p><strong>Популярные ESB решения:</strong></p>
+                    <ul>
+                        <li><strong>MuleSoft Anypoint Platform:</strong> облачная и on-premise платформа</li>
+                        <li><strong>Apache Camel:</strong> open-source фреймворк для интеграции</li>
+                        <li><strong>IBM Integration Bus:</strong> корпоративное решение</li>
+                        <li><strong>Oracle Service Bus:</strong> часть Oracle SOA Suite</li>
+                        <li><strong>WSO2 ESB:</strong> open-source решение</li>
+                    </ul>
+                    <p><strong>Архитектурные паттерны ESB:</strong></p>
+                    <ul>
+                        <li>Message Router</li>
+                        <li>Message Translator</li>
+                        <li>Content-Based Router</li>
+                        <li>Message Filter</li>
+                        <li>Splitter/Aggregator</li>
+                    </ul>
+                    <p><strong>Когда использовать ESB:</strong> множество систем для интеграции, сложные трансформации, централизованное управление, корпоративные стандарты.</p>
+                </div>
+            </div>
+
+            <div class="question" id="q23">
+                <span class="question-number">23</span>
+                <div class="question-title">Брокеры сообщений, Rabbit MQ, Apache Kafka</div>
+                <div class="answer">
+                    <p><strong>Брокер сообщений</strong> — промежуточное ПО для асинхронного обмена сообщениями между приложениями.</p>
+                    <p><strong>RabbitMQ:</strong></p>
+                    <ul>
+                        <li>Брокер сообщений на основе протокола AMQP</li>
+                        <li>Поддержка различных паттернов: очереди, exchanges, routing</li>
+                        <li><strong>Exchanges типы:</strong> Direct, Topic, Fanout, Headers</li>
+                        <li>Гарантия доставки, персистентность сообщений</li>
+                        <li>Поддержка кластеризации и высокой доступности</li>
+                        <li>Управляемый интерфейс через веб-консоль</li>
+                        <li><strong>Использование:</strong> задачи, уведомления, микросервисная коммуникация</li>
+                    </ul>
+                    <p><strong>Apache Kafka:</strong></p>
+                    <ul>
+                        <li>Распределенная платформа потоковой обработки данных</li>
+                        <li>Основан на концепции логов (log-based)</li>
+                        <li><strong>Концепции:</strong> Topics, Partitions, Producers, Consumers, Consumer Groups</li>
+                        <li>Высокая пропускная способность (миллионы сообщений в секунду)</li>
+                        <li>Хранение сообщений с настраиваемым временем хранения</li>
+                        <li>Горизонтальное масштабирование</li>
+                        <li>Поддержка потоковой обработки (Kafka Streams)</li>
+                        <li><strong>Использование:</strong> event streaming, event sourcing, аналитика в реальном времени, лог-агрегация</li>
+                    </ul>
+                    <p><strong>Сравнение:</strong></p>
+                    <ul>
+                        <li><strong>RabbitMQ:</strong> лучше для задач, уведомлений, простой маршрутизации</li>
+                        <li><strong>Kafka:</strong> лучше для потоков событий, больших объемов данных, аналитики</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q24">
+                <span class="question-number">24</span>
+                <div class="question-title">Виды API для интеграции ИС. Конечная точка. Сравнение SOAP с REST и GraphQL</div>
+                <div class="answer">
+                    <p><strong>Виды API:</strong></p>
+                    <ul>
+                        <li><strong>REST API:</strong> архитектурный стиль на основе HTTP</li>
+                        <li><strong>SOAP API:</strong> протокол на основе XML</li>
+                        <li><strong>GraphQL:</strong> язык запросов для API</li>
+                        <li><strong>gRPC:</strong> RPC фреймворк от Google</li>
+                        <li><strong>WebSocket:</strong> двусторонняя коммуникация</li>
+                    </ul>
+                    <p><strong>Конечная точка (Endpoint):</strong> URL адрес API ресурса, например: https://api.example.com/v1/orders</p>
+                    <p><strong>Сравнение SOAP, REST, GraphQL:</strong></p>
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                        <tr style="background: #f0f0f0;">
+                            <th style="padding: 10px; border: 1px solid #ddd;">Критерий</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">SOAP</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">REST</th>
+                            <th style="padding: 10px; border: 1px solid #ddd;">GraphQL</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Формат данных</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">XML</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">JSON, XML</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">JSON</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Протокол</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">HTTP, SMTP</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">HTTP</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">HTTP</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Стиль</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Протокол</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Архитектурный стиль</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Язык запросов</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Сложность</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Высокая</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Низкая</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Средняя</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Гибкость запросов</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Низкая</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Средняя</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Высокая</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><strong>Кэширование</strong></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ограниченное</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Хорошее</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Сложное</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question" id="q25">
+                <span class="question-number">25</span>
+                <div class="question-title">Механизмы авторизации и аутентификации. OAuth и OIDC</div>
+                <div class="answer">
+                    <p><strong>Аутентификация</strong> — процесс проверки личности пользователя (кто вы?).</p>
+                    <p><strong>Авторизация</strong> — процесс определения прав доступа (что вы можете делать?).</p>
+                    <p><strong>OAuth 2.0:</strong></p>
+                    <ul>
+                        <li>Протокол авторизации для предоставления доступа к ресурсам</li>
+                        <li><strong>Роли:</strong> Resource Owner (пользователь), Client (приложение), Authorization Server, Resource Server</li>
+                        <li><strong>Типы грантов (Grant Types):</strong></li>
+                        <ul>
+                            <li><strong>Authorization Code:</strong> для веб-приложений</li>
+                            <li><strong>Client Credentials:</strong> для сервер-к-сервер</li>
+                            <li><strong>Resource Owner Password:</strong> для доверенных приложений</li>
+                            <li><strong>Implicit:</strong> устаревший, для SPA</li>
+                        </ul>
+                        <li><strong>Токены:</strong> Access Token (доступ к ресурсам), Refresh Token (обновление access token)</li>
+                        <li><strong>Поток:</strong> запрос авторизации → получение кода → обмен на токен → использование токена</li>
+                    </ul>
+                    <p><strong>OIDC (OpenID Connect):</strong></p>
+                    <ul>
+                        <li>Расширение OAuth 2.0 для аутентификации</li>
+                        <li>Добавляет ID Token (JWT) с информацией о пользователе</li>
+                        <li>Стандартизированные claims (sub, email, name и др.)</li>
+                        <li>UserInfo endpoint для получения профиля пользователя</li>
+                        <li>Решает задачу аутентификации (OAuth только авторизация)</li>
+                    </ul>
+                    <p><strong>Другие механизмы:</strong></p>
+                    <ul>
+                        <li><strong>API Keys:</strong> простые ключи для идентификации</li>
+                        <li><strong>Basic Auth:</strong> username:password в заголовке</li>
+                        <li><strong>Bearer Token:</strong> токен в заголовке Authorization</li>
+                        <li><strong>JWT (JSON Web Token):</strong> самодостаточный токен с данными</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q26">
+                <span class="question-number">26</span>
+                <div class="question-title">Проектирование интеграции через REST-API</div>
+                <div class="answer">
+                    <p><strong>REST (Representational State Transfer)</strong> — архитектурный стиль для веб-сервисов.</p>
+                    <p><strong>Принципы REST:</strong></p>
+                    <ul>
+                        <li><strong>Ресурсы:</strong> все сущности представлены как ресурсы с уникальными URI</li>
+                        <li><strong>HTTP методы:</strong> GET (чтение), POST (создание), PUT (обновление), PATCH (частичное обновление), DELETE (удаление)</li>
+                        <li><strong>Stateless:</strong> каждый запрос содержит всю необходимую информацию</li>
+                        <li><strong>Кэширование:</strong> использование HTTP кэширования</li>
+                        <li><strong>Единообразный интерфейс:</strong> стандартизированные форматы и протоколы</li>
+                    </ul>
+                    <p><strong>Проектирование REST API:</strong></p>
+                    <p><strong>1. Структура URL:</strong></p>
+                    <ul>
+                        <li>Использовать существительные, не глаголы: /orders, а не /getOrders</li>
+                        <li>Иерархия ресурсов: /orders/123/items</li>
+                        <li>Версионирование: /v1/orders или через заголовок</li>
+                    </ul>
+                    <p><strong>2. HTTP методы и статусы:</strong></p>
+                    <ul>
+                        <li>GET → 200 OK, 404 Not Found</li>
+                        <li>POST → 201 Created, 400 Bad Request</li>
+                        <li>PUT → 200 OK, 204 No Content</li>
+                        <li>DELETE → 204 No Content, 404 Not Found</li>
+                    </ul>
+                    <p><strong>3. Формат данных:</strong></p>
+                    <ul>
+                        <li>JSON как основной формат</li>
+                        <li>Content-Type: application/json</li>
+                        <li>Единообразная структура ответов</li>
+                    </ul>
+                    <p><strong>4. Обработка ошибок:</strong></p>
+                    <ul>
+                        <li>Стандартные HTTP коды ошибок</li>
+                        <li>Структурированные сообщения об ошибках</li>
+                    </ul>
+                    <p><strong>5. Пагинация, фильтрация, сортировка:</strong></p>
+                    <ul>
+                        <li>?page=1&limit=20</li>
+                        <li>?filter=status:active</li>
+                        <li>?sort=createdAt:desc</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question" id="q27">
+                <span class="question-number">27</span>
+                <div class="question-title">Принципы и правила проектирования API</div>
+                <div class="answer">
+                    <p><strong>Основные принципы проектирования API:</strong></p>
+                    <p><strong>1. Простота и понятность:</strong></p>
+                    <ul>
+                        <li>Интуитивно понятные URL</li>
+                        <li>Последовательная структура</li>
+                        <li>Понятные названия ресурсов и методов</li>
+                    </ul>
+                    <p><strong>2. Единообразие:</strong></p>
+                    <ul>
+                        <li>Единый стиль именования (camelCase или snake_case)</li>
+                        <li>Стандартизированные форматы ответов</li>
+                        <li>Последовательная обработка ошибок</li>
+                    </ul>
+                    <p><strong>3. Версионирование:</strong></p>
+                    <ul>
+                        <li>Явное версионирование API (/v1/, /v2/)</li>
+                        <li>Обратная совместимость</li>
+                        <li>Политика устаревания (deprecation)</li>
+                    </ul>
+                    <p><strong>4. Безопасность:</strong></p>
+                    <ul>
+                        <li>HTTPS для всех запросов</li>
+                        <li>Аутентификация и авторизация</li>
+                        <li>Валидация входных данных</li>
+                        <li>Защита от частых запросов (rate limiting)</li>
+                    </ul>
+                    <p><strong>5. Производительность:</strong></p>
+                    <ul>
+                        <li>Пагинация для больших списков</li>
+                        <li>Фильтрация и сортировка на стороне сервера</li>
+                        <li>Кэширование где возможно</li>
+                        <li>Минимизация количества запросов</li>
+                    </ul>
+                    <p><strong>6. Документация:</strong></p>
+                    <ul>
+                        <li>Полная и актуальная документация</li>
+                        <li>Примеры запросов и ответов</li>
+                        <li>Описание ошибок</li>
+                        <li>Интерактивная документация (Swagger/OpenAPI)</li>
+                    </ul>
+                    <p><strong>7. Обработка ошибок:</strong></p>
+                    <ul>
+                        <li>Понятные сообщения об ошибках</li>
+                        <li>Коды ошибок с описанием</li>
+                        <li>Структурированный формат ошибок</li>
+                    </ul>
+                    <p><strong>8. Ограничения и лимиты:</strong></p>
+                    <ul>
+                        <li>Rate limiting для защиты от злоупотреблений</li>
+                        <li>Лимиты на размер запросов</li>
+                        <li>Таймауты для долгих операций</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script>
+        const searchInput = document.getElementById('questionSearch');
+        const questions = document.querySelectorAll('.question');
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        // Поиск по номеру вопроса
+        searchInput.addEventListener('input', function(e) {
+            const searchValue = e.target.value.trim();
+            
+            if (searchValue === '') {
+                questions.forEach(q => {
+                    q.style.display = 'block';
+                });
+                return;
+            }
+
+            const questionNum = parseInt(searchValue);
+            
+            if (!isNaN(questionNum) && questionNum >= 1 && questionNum <= 27) {
+                questions.forEach((q, index) => {
+                    if (index + 1 === questionNum) {
+                        q.style.display = 'block';
+                        q.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        q.style.animation = 'none';
+                        setTimeout(() => {
+                            q.style.animation = 'pulse 0.5s';
+                        }, 10);
+                    } else {
+                        q.style.display = 'none';
+                    }
+                });
+            } else {
+                // Если не число или вне диапазона, показываем все
+                questions.forEach(q => {
+                    q.style.display = 'block';
+                });
+            }
+        });
+
+        // Кнопка "Наверх"
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            searchInput.value = '';
+            questions.forEach(q => {
+                q.style.display = 'block';
+            });
+        });
+
+        // Добавляем CSS анимацию
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.02); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
