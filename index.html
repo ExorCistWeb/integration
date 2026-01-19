@@ -176,7 +176,7 @@
             <h1>Экзаменационные вопросы</h1>
             <p>Интеграция ИТ систем</p>
             <div class="search-box">
-                <input type="text" class="search-input" id="questionSearch" placeholder="Введите номер вопроса (1-27)">
+                <input type="text" class="search-input" id="questionSearch" placeholder="Введите номер вопроса (1-27) или текст вопроса">
             </div>
         </div>
         <div class="content">
@@ -1196,7 +1196,7 @@
         const questions = document.querySelectorAll('.question');
         const scrollToTopBtn = document.getElementById('scrollToTop');
 
-        // Поиск по номеру вопроса
+        // Поиск по номеру вопроса или тексту
         searchInput.addEventListener('input', function(e) {
             const searchValue = e.target.value.trim();
             
@@ -1208,24 +1208,45 @@
             }
 
             const questionNum = parseInt(searchValue);
+            let foundFirst = false;
             
+            // Проверяем, является ли ввод числом от 1 до 27
             if (!isNaN(questionNum) && questionNum >= 1 && questionNum <= 27) {
                 questions.forEach((q, index) => {
                     if (index + 1 === questionNum) {
                         q.style.display = 'block';
-                        q.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        q.style.animation = 'none';
-                        setTimeout(() => {
-                            q.style.animation = 'pulse 0.5s';
-                        }, 10);
+                        if (!foundFirst) {
+                            q.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            q.style.animation = 'none';
+                            setTimeout(() => {
+                                q.style.animation = 'pulse 0.5s';
+                            }, 10);
+                            foundFirst = true;
+                        }
                     } else {
                         q.style.display = 'none';
                     }
                 });
             } else {
-                // Если не число или вне диапазона, показываем все
-                questions.forEach(q => {
-                    q.style.display = 'block';
+                // Поиск по тексту вопроса
+                const searchLower = searchValue.toLowerCase();
+                questions.forEach((q, index) => {
+                    const questionTitle = q.querySelector('.question-title');
+                    const titleText = questionTitle ? questionTitle.textContent.toLowerCase() : '';
+                    
+                    if (titleText.includes(searchLower)) {
+                        q.style.display = 'block';
+                        if (!foundFirst) {
+                            q.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            q.style.animation = 'none';
+                            setTimeout(() => {
+                                q.style.animation = 'pulse 0.5s';
+                            }, 10);
+                            foundFirst = true;
+                        }
+                    } else {
+                        q.style.display = 'none';
+                    }
                 });
             }
         });
